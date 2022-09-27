@@ -2,7 +2,7 @@
     "name": "wp-hyperdrive/orbit",
     "type": "project",
     "license": "GPL-3.0-or-later",
-    "description": "WordPress boilerplate with Composer",
+    "description": "The Composer based WordPress boilerplate that will get you up and running in less than twelve parsecs.",
     "authors": [
         {
             "name": "High Five",
