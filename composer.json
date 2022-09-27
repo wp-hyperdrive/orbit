@@ -67,7 +67,7 @@
         "wordpress-content-dir": "public/app"
     },
     "scripts": {
-        "post-update-cmd": [
+        "post-root-package-install": [
             "php -r \"file_exists('logs') || mkdir('logs');\"",
             "php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "scripts/salts.sh"
