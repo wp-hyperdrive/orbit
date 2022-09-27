@@ -1,0 +1,76 @@
+{
+    "name": "wp-hyperdrive/orbit",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "description": "WordPress boilerplate with Composer",
+    "authors": [
+        {
+            "name": "High Five",
+            "email": "hello@high-five.dev",
+            "homepage": "https://www.high-five.dev"
+        },
+        {
+            "name": "Harm Putman",
+            "email": "harm@high-five.dev",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "composer",
+        "wordpress",
+        "wp",
+        "wp-config"
+    ],
+    "support": {
+        "issues": "https://github.com/wp-hyperdrive/orbit/issues",
+        "forum": "https://github.com/wp-hyperdrive/orbit/wiki"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "composer/installers": "^2.2",
+        "vlucas/phpdotenv": "^5.4",
+        "oscarotero/env": "^2.1",
+        "johnpbloch/wordpress-core-installer": "^2.0",
+        "johnpbloch/wordpress-core": "^6.0",
+        "wp-hyperdrive/config": "^1.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "wp-hyperdrive/*": "source",
+            "*": "dist"
+        },
+        "allow-plugins": {
+            "composer/installers": true,
+            "johnpbloch/wordpress-core-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "installer-paths": {
+            "public/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+            "public/app/plugins/{$name}/": ["type:wordpress-plugin"],
+            "public/app/themes/{$name}/": ["type:wordpress-theme"]
+        },
+        "wordpress-install-dir": "public/cms",
+        "wordpress-content-dir": "public/app"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "php -r \"file_exists('logs') || mkdir('logs');\"",
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "scripts/salts.sh"
+        ]
+    }
+}
