@@ -14,10 +14,13 @@ ifndef DDEV_CONFIGURED
 		--database=mariadb:10.6 \
 		--project-type=php \
 		--php-version=8.1 \
+		--nodejs-version=18 \
 		--project-name=$(DIR_BASENAME) \
 		--project-tld=test
+	@ddev get drud/ddev-cron
 endif
 	@echo "\033[95m🚀 Dev environment is configured, go to lightspeed!\033[0m"
+	@ddev start
 
 clean:
 	@echo "\033[95m🧹 Cleaning project...\033[0m"
