@@ -9,7 +9,7 @@ ifndef DDEV
 	$(error 🙀 Ddev is not available, install it first!)
 endif
 ifndef DDEV_CONFIGURED
-	@echo "🪄 Setting up dev environment"
+	@echo "\033[95m🪄 Setting up dev environment...\033[0m"
 	@ddev config \
 		--database=mariadb:10.6 \
 		--project-type=php \
@@ -17,8 +17,8 @@ ifndef DDEV_CONFIGURED
 		--project-name=$(DIR_BASENAME) \
 		--project-tld=test
 endif
-	@echo "🚀 Dev environment is configured, go to lightspeed!"
+	@echo "\033[95m🚀 Dev environment is configured, go to lightspeed!\033[0m"
 
 clean:
-	@echo "🧹 Cleaning project..."
+	@echo "\033[95m🧹 Cleaning project...\033[0m"
 	@git clean -e .env -e public/app/themes/* -xdfq && rm -rf vendor
