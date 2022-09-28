@@ -6,7 +6,7 @@ DIR_BASENAME := $(shell echo $$(TMP=$${PWD##*/}; echo $${TMP%.*};))
 
 dev:
 ifndef DDEV
-	$(error "🙀 Ddev is not available, install it first!")
+	$(error 🙀 Ddev is not available, install it first!)
 endif
 ifndef DDEV_CONFIGURED
 	@echo "🪄 Setting up dev environment"
