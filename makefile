@@ -1,8 +1,10 @@
+-include dev/ddev.conf
+
 DDEV := $(shell command -v ddev 2> /dev/null)
 
 DDEV_CONFIGURED := $(shell command ddev describe 2> /dev/null)
 
-DIR_BASENAME := $(shell echo $$(TMP=$${PWD##*/}; echo $${TMP%.*};))
+DIR_BASENAME := $(shell basename $(CURDIR))
 
 dev:
 ifndef DDEV
@@ -11,12 +13,12 @@ endif
 ifndef DDEV_CONFIGURED
 	@echo "\033[95m🪄 Setting up dev environment...\033[0m"
 	@ddev config \
-		--database=mariadb:10.6 \
+		--database=$(DB) \
 		--project-type=php \
-		--php-version=8.1 \
-		--nodejs-version=18 \
+		--php-version=$(PHP) \
+		--nodejs-version=$(NODE) \
 		--project-name=$(DIR_BASENAME) \
-		--project-tld=test
+		--project-tld=$(TLD)
 	@ddev get drud/ddev-cron
 endif
 	@echo "\033[95m🚀 Dev environment is configured, go to lightspeed!\033[0m"
@@ -24,4 +26,6 @@ endif
 
 clean:
 	@echo "\033[95m🧹 Cleaning project...\033[0m"
+	@git init
+	@git add .
 	@git clean -e .env -e public/app/themes/* -xdfq && rm -rf vendor
