@@ -4,7 +4,7 @@ DDEV := $(shell command -v ddev 2> /dev/null)
 
 DDEV_CONFIGURED := $(shell command ddev describe 2> /dev/null)
 
-DIR_BASENAME := $(shell basename $(CURDIR))
+DIR_BASENAME := $(shell echo $$(TMP=$$(basename $(CURDIR)); echo $${TMP%.*}))
 
 ddev:
 ifndef DDEV
