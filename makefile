@@ -26,6 +26,6 @@ endif
 
 clean:
 	@echo "\033[95m🧹 Cleaning project...\033[0m"
-	@git init
+	@git init -q
 	@git add .
 	@git clean -e .env -e public/app/themes/* -xdfq && rm -rf vendor
