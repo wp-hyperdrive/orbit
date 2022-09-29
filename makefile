@@ -6,7 +6,7 @@ DDEV_CONFIGURED := $(shell command ddev describe 2> /dev/null)
 
 DIR_BASENAME := $(shell basename $(CURDIR))
 
-dev:
+ddev:
 ifndef DDEV
 	$(error 🙀 Ddev is not available, install it first!)
 endif
