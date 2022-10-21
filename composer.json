@@ -36,13 +36,14 @@
         }
     ],
     "require": {
-        "php": ">=8.0",
+        "php": "^8.0",
         "composer/installers": "^2.2",
         "vlucas/phpdotenv": "^5.4",
         "oscarotero/env": "^2.1",
         "johnpbloch/wordpress-core-installer": "^2.0",
         "johnpbloch/wordpress-core": "^6.0",
-        "wp-hyperdrive/config": "^1.0"
+        "wp-hyperdrive/config": "^1.0",
+        "wp-hyperdrive/geonosis": "dev-main"
     },
     "config": {
         "optimize-autoloader": true,
