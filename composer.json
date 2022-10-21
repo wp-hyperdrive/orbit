@@ -43,7 +43,8 @@
         "johnpbloch/wordpress-core-installer": "^2.0",
         "johnpbloch/wordpress-core": "^6.0",
         "wp-hyperdrive/config": "^1.0",
-        "wp-hyperdrive/geonosis": "dev-main"
+        "wp-hyperdrive/geonosis": "dev-main",
+        "wpackagist-plugin/wordpress-seo": "^19.8"
     },
     "config": {
         "optimize-autoloader": true,
