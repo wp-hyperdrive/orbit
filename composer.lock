@@ -824,6 +824,72 @@
                 "source": "https://github.com/wp-hyperdrive/config/tree/1.0"
             },
             "time": "2022-09-27T19:44:35+00:00"
+        },
+        {
+            "name": "wp-hyperdrive/geonosis",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-hyperdrive/geonosis.git",
+                "reference": "0fb69f0a6fb552acfe5c5456f87bb8711c25b8a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-hyperdrive/geonosis/zipball/0fb69f0a6fb552acfe5c5456f87bb8711c25b8a7",
+                "reference": "0fb69f0a6fb552acfe5c5456f87bb8711c25b8a7",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.12 || ^2.0",
+                "php": "^8.0"
+            },
+            "default-branch": true,
+            "type": "wordpress-theme",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "High Five",
+                    "email": "hello@high-five.dev",
+                    "homepage": "https://www.high-five.dev"
+                },
+                {
+                    "name": "Harm Putman",
+                    "email": "harm@high-five.dev",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Geonosis is a block-based WordPress theme. It is built to leverage the full-site editing functionality.",
+            "keywords": [
+                "themes",
+                "wordpress"
+            ],
+            "support": {
+                "forum": "https://github.com/wp-hyperdrive/geonosis/wiki",
+                "issues": "https://github.com/wp-hyperdrive/geonosis/issues",
+                "source": "https://github.com/wp-hyperdrive/geonosis/tree/main"
+            },
+            "time": "2022-10-22T00:30:58+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-seo",
+            "version": "19.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "tags/19.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.19.8.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
         }
     ],
     "packages-dev": [],
